@@ -1,0 +1,144 @@
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+// @keyframes moveWhoCards {
+//     0% {
+//         opacity: 0;
+//     }
+
+//     60% {
+//         opacity: 0;
+//         transform: translate(30%);
+//     }
+
+//     100% {
+//         opacity: 1;
+//         transform: translate(0);
+//     }
+// }
+
+
+@keyframes flux {
+    0% {
+        color : $color-blue-light ;
+    }
+
+    50% {
+        color : $color-blue-dark ;
+    }
+
+    100% {
+        opacity: 1;
+        color : $color-blue-light ;
+    }
+}
+
+@keyframes navAnimation1 {
+    0% {
+        // color : $color-blue-light ;
+    }
+
+    50% {
+        color : $color-pink-light ;
+    }
+
+    100% {
+        color : $color-white ;
+    }
+}
+
+@keyframes navAnimation2 {
+    0% {
+        // color : $color-blue-light ;
+    }
+
+    50% {
+        color : $color-blue-light ;
+    }
+
+    100% {
+        color : $color-white ;
+    }
+}
+
+
+@keyframes animateRocket {
+    0% {
+       background-color: rgba($color-white,  0.2) ; 
+       transform: translate(0 , 0 );
+    }
+
+    25% {
+        transform: translate(3rem , -3rem );
+        background-color: rgba($color-white,  0.3) ;
+    }
+
+    50% {
+        transform: translate(1rem , -1rem );
+        background-color: rgba($color-white,  0.5) ;
+    }
+
+    75% {
+        transform: translate(-2rem , -2rem );
+        background-color: rgba($color-white,  0.8) ;
+    }
+
+    100% {
+        transform: translate(0, 0 );
+        background-color: rgba($color-white,  0.2) ;
+    }
+}
+
+@keyframes fuelRocket {
+    0% {
+        background: $color-blue-light;
+        transform: rotate(45deg) scaleY(1);
+    }
+
+    25% {
+        background: $color-pink-light;
+    }
+
+    50% {
+        background: $color-pink-dark;
+        transform: rotate(45deg) scaleY(2);
+    }
+
+    75% {
+        background: $color-blue-dark;
+    }
+
+    100% {
+        background: $color-blue-light;
+        transform: rotate(45deg) scaleY(1);
+    }
+}

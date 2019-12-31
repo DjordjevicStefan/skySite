@@ -1,0 +1,119 @@
+.navigation {
+  text-decoration: none;
+  background-color: transparent;
+  height: 9vh;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease-in;
+  text-shadow: $text-shadow;
+  z-index: 2000;
+
+  padding: 0 1.5rem;
+
+  &--black {
+    background-color: black;
+    box-shadow: 0 2px 4px rgba(#000000, 0.8);
+  }
+
+  &__logo-box { 
+    @include respond(phone-small){
+      margin-top: -.7rem;
+    }
+    
+  }
+
+
+  &__logo { 
+        font-size: 2.6rem;
+        font-weight: 400;
+        padding: 1rem 2rem;
+        text-decoration: inherit;
+        color: $color-white;
+
+    :first-child {
+      animation: navAnimation1 4s ease-in infinite;
+     
+    }
+
+    :last-child {
+      animation: navAnimation2 4s ease-in infinite;
+     
+    }
+  }
+
+
+  &__nav {
+    flex: 0 0 30%;
+
+    @include respond(tab-land){
+      flex: 0 0 40%;
+    }
+
+    @include respond(tab-port){
+      flex: 0 0 50%;
+    }
+
+    @include respond(phone-small){
+      flex: 0 0 57%;
+    }
+  }
+
+
+  &__list {
+    
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2rem;
+
+    @include respond(phone){
+      justify-content: space-evenly;
+      padding-right: 0;
+    }
+    
+  }
+
+  &__item {
+    flex: 0 0 20%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+        color: $color-pink-dark;
+        display: inline-block;
+        font-size: 2rem;
+        font-weight: 400;
+        // padding: 1rem 2rem;
+        text-decoration: inherit;
+        text-transform: uppercase;
+        transition: all .4s ease-in;
+        // background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+        // background-size: 220%;
+       
+
+    }
+    
+    &:hover,
+    &:active {
+        // background-position: 100%;
+        // color: $color-primary;
+        // transform: translateY(-.5rem);
+        letter-spacing: 1px;
+        color: $color-blue-light;
+        
+
+    }
+
+  }
+
+
+}
+

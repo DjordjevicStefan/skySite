@@ -1,0 +1,180 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    font-size: 2rem;
+    position: relative;
+    color: $color-white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    box-shadow: 0 1px 4px rgba($color-black, 0.6);
+
+    //Change for the <button> element
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    &::after {
+      transform: scaleX(1.5) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(2px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+ 
+  //// COLOR BUTTON VARIANTS 
+
+  &--pink-dark {
+    background-color: $color-pink-darkest;
+
+    &::after {
+      background-color: $color-pink-darkest;
+    }
+  }
+
+  &--pink {
+    background-color: $color-pink-dark;
+
+    &::after {
+      background-color: $color-pink-dark;
+    }
+  }
+
+  &--blue {
+    background-color: $color-blue-light;
+
+    &::after {
+      background-color: $color-blue-light;
+    }
+  }
+
+  &--blue-dark {
+    background-color: $color-blue-dark;
+
+    &::after {
+      background-color: $color-blue-dark;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.5s;
+  }
+
+  &--move {
+    animation: moveInRight 2s ease-in;
+    animation-fill-mode: backwards;
+  }
+
+
+//// BTN INNER TEXT COLOR
+
+&--text-black {
+  &,
+  &:link,
+  &:visited {
+    
+    color: $color-black;
+   
+  }
+}
+
+}
+
+
+
+
+
+///// BTN FOR SOCIAL NETWORKS
+.btn-network {
+  &,
+  &:link,
+  &:visited {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    position: relative;
+    background-color: $color-white ;
+    text-decoration: none;
+    padding: 1rem 1rem;
+    border-radius: 2rem;
+    transition: all 0.5s;
+    box-shadow: 0 1px 4px rgba($color-black, 0.6);
+    width: 9rem;
+    height: 9rem;
+
+    //Change for the <button> element
+    border: none;
+    cursor: pointer;
+  }
+
+  i {
+    color: $color-blue-dark ;
+    font-size: 4.5rem;
+  }
+
+  &:hover {
+    // transform: translateY(-3px);
+    // box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    & i {
+    z-index: 10;
+    color: $color-white ;
+    // font-size: 5rem;
+    }
+
+    &::after {
+      transform: scaleY(1);
+      height: 100%;
+    }
+  }
+
+
+  &:active,
+  &:focus {
+    outline: none;
+    // transform: translateY(2px);
+    // box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+ 
+  
+
+  &::after {
+    content: "";
+    display: inline-block;
+    // height: 100%;
+    // z-index: -1;
+    width: 100%;
+    border-radius: 2rem;
+    position: absolute;
+    background-color: $color-blue-dark;
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+    transition: all 0.5s;
+  }
+
+  
+
+}

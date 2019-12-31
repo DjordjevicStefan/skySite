@@ -1,0 +1,74 @@
+*,
+*::after,
+*::before {
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is , in this case 1rem = 10px
+    font-size: 62.5%;
+
+    @include respond(tab-land) { // width < 1200px
+        font-size: 56.25%; //1 rem = 9px
+    }
+    
+    @include respond(tab-port) { // width < 900px
+        font-size: 50%; //1 rem = 8px
+    }
+
+    @include respond(phone) {  // width < 600px
+        font-size: 43.75%;  //1 rem = 7px
+    }
+
+
+    @include respond(big-desktop) {  // widht > 1800px 
+        font-size: 100%; //1rem = 16px
+    }
+}
+
+body {
+    
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    /*font-size: 16px;*/
+    line-height: 1.7;
+    // padding: 3rem;
+    box-sizing: border-box;
+}
+
+
+.heading-primary {
+     display: flex;
+     flex-direction: column;
+     align-items: center ;
+     
+    &--main {
+      display: block;
+      color: $color-white;
+      font-size: 6rem;
+      letter-spacing: 2px;
+      text-shadow: $text-shadow;
+
+      @include respond(phone) {
+        
+     }
+    }
+
+    &--animated {
+        backface-visibility: hidden; 
+        animation: moveInLeft 1.5s ease-in;
+    }
+
+    &--sub-animated {
+        animation: flux 4s ease-in infinite;
+        animation-delay: 2s;
+        color : $color-blue-light ; 
+        text-shadow: $text-shadow;
+
+        @include respond(tab-port) {
+           font-size: 3rem;
+        }
+    } 
+}

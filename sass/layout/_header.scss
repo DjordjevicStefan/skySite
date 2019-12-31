@@ -1,0 +1,59 @@
+.header {
+    height: 100vh;
+    background-image: linear-gradient(to bottom , rgba($color-white, 0.8) , rgba($color-black, 1)) , url(../img/bg32.jpg);
+    background-size: cover;
+    position: relative;
+
+    &__text-box { 
+       position: absolute;
+       top: 40%;
+       left: 50%;
+       transform: translate(-50%);
+       display: flex;
+       align-items: center;
+       flex-direction: column;
+    }
+
+    &__rocket { 
+        pointer-events: none;
+        position: absolute;
+        background-color: rgba($color-white,  0.2) ;
+        top: 50%;
+        left: 15%;
+        width: 13rem;
+        height: 13rem;
+        text-align: center;
+        font-size: 8rem;
+        line-height: 13rem;
+        border-radius: 50%;
+        box-shadow: inset 0 0 4rem rgba(255, 255, 255, .1);
+        animation: animateRocket 5s ease-in infinite;
+
+        @include respond(phone) {
+            top: 67%;
+            left: 12%;
+        }
+
+        @include respond(phone-small) {
+            top: 73%;
+            left: 10%;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 8.5rem;
+            left: -2.5rem;
+            width: 35%;
+            height: 70%;
+            background: $color-blue-light;
+            border-radius: 50%;
+            filter: blur(1rem)  contrast(190%);
+            transform: rotate(45deg);
+            z-index: -1;
+            animation: fuelRocket 5s linear infinite;
+            
+        }
+        
+     }
+}
